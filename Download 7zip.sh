@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 if ! command -v p7zip &> /dev/null; then
     sudo apt update
     sudo apt install p7zip -y

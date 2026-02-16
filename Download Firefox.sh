@@ -8,6 +8,13 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
+if ! command -v curl &> /dev/null; then
+    sudo apt update
+    sudo apt install curl -y
+else
+    echo "curl est déjà installé"
+fi
+
 LATEST=$(curl -s https://product-details.mozilla.org/1.0/firefox_versions.json | grep LATEST_FIREFOX_VERSION | cut -d '"' -f4)
 
 if command -v firefox >/dev/null 2>&1; then

@@ -1,6 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
+if ! command -v google-chrome-stable &> /dev/null; then
+    echo "Google Chrome n'est pas installé. Installation en cours..."
+else
+    echo "Google Chrome est déjà installé"
+    exit 0
+fi
+
 echo "Mise à jour des dépôts..."
 apt update -y
 

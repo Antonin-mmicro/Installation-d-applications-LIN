@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# Vérification des droits root
+set -euo pipefail
+
 if [ "$EUID" -ne 0 ]; then
   echo "Ce script doit être exécuté en tant que root (sudo)."
   echo "Script terminé."
   exit 1
 fi
 
-# Récupération de la dernière version officielle
 LATEST=$(curl -s https://product-details.mozilla.org/1.0/firefox_versions.json | grep LATEST_FIREFOX_VERSION | cut -d '"' -f4)
 
-# Vérification si Firefox est installé
 if command -v firefox >/dev/null 2>&1; then
     ACTUAL=$(firefox --version | awk '{print $3}')
     
@@ -28,10 +27,8 @@ else
     echo "Installation en cours..."
 fi
 
-# Mise à jour des dépôts
 apt update
 
-# Installation / mise à jour
 apt install -y firefox
 
 if command -v firefox >/dev/null 2>&1; then

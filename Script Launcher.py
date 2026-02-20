@@ -17,7 +17,7 @@ print(Fore.LIGHTMAGENTA_EX + r"""
 [3] - Download 7zip 
 """)
 
-numb = int["1", "2", "3"]
+numb = ["1", "2", "3"]
 
 answer = input("-->")
 

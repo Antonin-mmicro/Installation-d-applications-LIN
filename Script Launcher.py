@@ -23,6 +23,6 @@ answer = input("-->")
 
 if answer in numb:
     for i in tqdm(range(10000)):
-        print("TEST")
+        pass
 else:
     print("True")

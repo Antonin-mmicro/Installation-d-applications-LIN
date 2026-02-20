@@ -18,11 +18,13 @@ print(Fore.LIGHTMAGENTA_EX + r"""
 """)
 
 numb = ["1", "2", "3"]
+test = int(0)
 
 answer = input("-->")
 
 if answer in numb:
     for i in tqdm(range(int(9999999))):
-        print("test")
+        test += int(1)
+    print(test)
 else:
     print("True")

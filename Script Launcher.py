@@ -17,9 +17,11 @@ print(Fore.LIGHTMAGENTA_EX + r"""
 [3] - Download 7zip 
 """)
 
+numb = int["1", "2", "3"]
+
 answer = input("-->")
 
-if answer != int:
+if answer != numb:
     print("False")
 else:
     print("True")

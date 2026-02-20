@@ -22,6 +22,7 @@ numb = ["1", "2", "3"]
 answer = input("-->")
 
 if answer in numb:
-    print("False")
+    for i in tqdm(range(10000)):
+        print("TEST")
 else:
     print("True")

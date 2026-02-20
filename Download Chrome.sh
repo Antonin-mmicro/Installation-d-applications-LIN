@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
+if [ "$EUID" -ne 0 ]; then
+  echo "Ce script doit être exécuté en tant que root (sudo)."
+  echo "Script terminé."
+  exit 1
+fi
+
 if ! command -v google-chrome-stable &> /dev/null; then
     echo "Google Chrome n'est pas installé. Installation en cours..."
 else

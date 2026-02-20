@@ -14,6 +14,12 @@ print(Fore.LIGHTMAGENTA_EX + r"""
                 /_/                                                           
 ------------------------------------------------------------------------------ 
 [1] - Download Firefox      [2] - Download Chrome
-[3] - Download 7zip
+[3] - Download 7zip 
 """)
 
+answer = input("-->")
+
+if answer != int:
+    print("False")
+else:
+    print("True")

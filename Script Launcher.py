@@ -21,7 +21,7 @@ numb = ["1", "2", "3"]
 
 answer = input("-->")
 
-if answer != numb:
+if answer in numb:
     print("False")
 else:
     print("True")

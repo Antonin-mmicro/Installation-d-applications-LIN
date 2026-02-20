@@ -22,7 +22,7 @@ numb = ["1", "2", "3"]
 answer = input("-->")
 
 if answer in numb:
-    for i in tqdm(range(10000)):
+    for i in tqdm(range(int(9999999))):
         pass
 else:
     print("True")

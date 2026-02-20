@@ -1,5 +1,5 @@
 from colorama import *
-import tqdm
+from tqdm import tqdm
 import time
 
 init()
